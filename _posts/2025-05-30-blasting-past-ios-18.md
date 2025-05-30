@@ -3,6 +3,7 @@ layout: post
 title: Blasting Past iOS 18
 date: 2025-05-30 10:20
 categories: ios
+author: Siddharth Aeri (<a href="https://x.com/b1n4r1b01">@b1n4r1b01</a>) from the dfsec iOS team
 ---
 
 In iOS 14 and 15 Apple shipped several iOS kernel mitigations that drastically changed iOS exploitation, and many researchers documented these mitigations publicly. In iOS 17 and 18, Apple introduced several interesting iOS userspace mitigations, however they were not discussed in as much detail. In this blog post we'll discuss some of these mitigations by using the BLASTPASS exploit as a case study, and explore how relevant these exploit primitives are in iOS 18. 
@@ -366,7 +367,4 @@ That concludes our investigation of the two main exploit primitives used in the 
 Although we don't know how the attackers proceeded with the exploit chain after getting code execution in `MessagesBlastDoorService`, it is certain that any kind of iOS attack is done by researching the target daemon's capabilities. This includes file system access, kernel attack surface access, userspace pivot access, and so forth. The sandbox profile (governed by the kernel's `Sandbox.kext`) dictates this access, and we saw in iOS 18.4 that Apple started shipping much stricter sandbox profiles with very selective access to kernel APIs.
 
 Apple also made some major architectural changes to one of the most attacked sandbox escape daemons on iOS, `mediaserverd`. It acted as a great victim for a usermode pivot because of how much kernel attack surface it exposed, whilst itself exposing a large attack surface (including some RCE surfaces). In iOS 17 and iOS 18, Apple split `mediaserverd` across several other daemons including `mediaplaybackd`, `cameracaptured`, `audiomxd`, `AudioConvertorService`, `airplayd`, et al. These daemons have a very strict sandbox, where Apple tried to minimise the kernel attack surface as much as possible. As such, an attacker would now need to look for vulnerabilities in very specific daemons, based on an existing n-stage userspace pivot or kernel exploit.
-
-# Credit
-
-We would like to thank Siddharth Aeri ([@b1n4r1b01](https://x.com/b1n4r1b01)) for writing this blog post.
+.
