@@ -6,13 +6,10 @@ permalink: /about/
 tags: about
 ---
 
-We are a front-runner with a proven track record in finding and exploiting
-vulnerabilities in most popular mobile products for many consecutive years. The
-source of our knowledge is our vast experience with the overall mobile
-platforms’ architecture, their subsystems and subcomponents, and the
-interaction between them.
+Dataflow Security (“dfsec”) was founded in 2020 by leaders in the security research community. 
+Our sole focus is on vulnerability research and exploit development.
 
-We are driven by our curiosity to understand systems and how they interact, and
-use this advantage to deliver unique research to our clients.
+The firm is home to a world-class R&D team, composed of elite researchers who excel at 
+finding and exploiting vulnerabilities in popular operating systems, browsers, and applications.
 
-Our website is [dfsec.com](https://dfsec.com).
+Visit our website at [dfsec.com](https://dfsec.com).
