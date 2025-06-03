@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About Dataflow Security
+nav_title: About
 permalink: /about/
 tags: about
 ---
