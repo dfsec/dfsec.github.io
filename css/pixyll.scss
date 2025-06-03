@@ -13,6 +13,16 @@
 
 @import 'variables';
 
+/* Override variables */
+$font-family: 'Manrope', sans-serif;
+$dfsec-primary: #183859;
+$dfsec-secondary: #0084B0;
+
+$nav-color: $dfsec-primary;
+$header-color: $dfsec-primary;
+$link-color: $dfsec-secondary;
+$link-hover-color: $dfsec-secondary;
+
 @import 'basscss';
 
 @import 'base';
@@ -34,3 +44,26 @@
 @import 'gists';
 @import 'measure';
 @import 'pagination';
+
+.site-header {
+  .site-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-weight: 600;
+  }
+  .logo {
+    max-width: 150px;
+  }
+  .site-nav {
+    margin: 0;
+    padding: 0;
+  }
+  .nav-active {
+
+  }
+  .nav-link {
+    font-weight: 700;
+    text-underline: none;
+  }
+}
