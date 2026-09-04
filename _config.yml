@@ -5,8 +5,6 @@ description: "Dataflow Security blog"
 baseurl:     ""
 url:         "https://blog.dfsec.com"
 date_format: "%b %-d, %Y"
-header_pages:
-  - about.md
 
 # Google services
 google_verification:
