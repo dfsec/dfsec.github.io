@@ -1,15 +1,39 @@
-<header class="site-header px2 px-responsive">
-  <div class="mt2 wrap">
-    <div class="measure">
-      <a href="{{ "/" | relative_url }}" class="site-title">
-        <img src="/images/DFSEC-logo.svg" alt="DFSEC Logo" class="logo" />
-      </a>
-      <nav class="site-nav">
-        {% include navigation.html %}
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="https://dfsec.com/" class="site-title">
+      <img src="{{ "/images/DFSEC-logo.svg" | relative_url }}" alt="DFSEC Logo" class="logo" />
+    </a>
+
+    <a href="https://dfsec.com/" class="mobile-bar-logo">
+      <img src="{{ "/images/DFSEC-logo.svg" | relative_url }}" alt="DFSEC Logo" class="logo" />
+    </a>
+
+    <nav class="site-nav" aria-label="Primary">
+      {% include navigation.html %}
+    </nav>
+
+    <div class="site-header-social">
+      {% include social_icons_header.html %}
+    </div>
+
+    <a class="nav-link nav-contact" href="https://dfsec.com/#contact">Contact</a>
+
+    <button type="button" class="mobile-menu-toggle" aria-controls="mobile-nav-popup" aria-expanded="false" aria-label="Open menu">Menu</button>
+  </div>
+
+  <div id="mobile-nav-popup" class="mobile-nav-popup" hidden>
+    <div class="mobile-nav-popup-overlay"></div>
+    <div class="mobile-nav-popup-box">
+      <button type="button" class="mobile-nav-popup-close" aria-label="Close menu">&times;</button>
+      <img src="{{ "/images/DFSEC-logo-white.svg" | relative_url }}" alt="DFSEC Logo" class="mobile-nav-logo" />
+      <div class="mobile-nav-social">
+        {% include social_icons_header.html %}
+      </div>
+      <nav class="mobile-nav-links" aria-label="Mobile">
+        {% include mobile_navigation.html %}
       </nav>
-      {% if site.show_social_icons %}
-        {% include social_links.html %}
-      {% endif %}
+      <hr class="mobile-nav-divider" />
+      <small class="mobile-nav-copyright">&copy; {{ site.time | date: "%Y" }} Dataflow Security SpA., All rights reserved.</small>
     </div>
   </div>
 </header>
