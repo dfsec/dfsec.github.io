@@ -44,27 +44,3 @@ $link-hover-color: $dfsec-secondary;
 @import 'gists';
 @import 'measure';
 @import 'pagination';
-
-.site-header {
-  .site-title {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    font-weight: 600;
-  }
-  .logo {
-    width: 150px;
-    max-width: 150px;
-  }
-  .site-nav {
-    margin: 0;
-    padding: 0;
-  }
-  .nav-active {
-
-  }
-  .nav-link {
-    font-weight: 700;
-    text-underline: none;
-  }
-}
