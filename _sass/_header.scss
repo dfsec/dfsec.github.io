@@ -92,7 +92,16 @@ $header-breakpoint: 1025px;
   box-sizing: border-box;
   color: $dfsec-primary;
   background-image: none;
+  text-decoration: none;
   padding-right: 10px;
+}
+
+.header-social-link:hover,
+.header-social-link:focus,
+.header-social-link:active {
+  text-decoration: none;
+  background-image: none;
+  opacity: 0.88;
 }
 
 .header-social-link svg {
